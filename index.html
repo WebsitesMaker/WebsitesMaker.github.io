@@ -1,5 +1,48 @@
-<h1>This is a website for tips on coding in html, there will be links below to the different tutorials.</h1>
-<h2><a href="center_div.html">How to center a div</a></h2
-<body>
-  <title>Html tutorials redirecter</title>
-</body>
+<html>
+  <head>
+	<h1>Type, feet, meters, lbs, or kg</h1>
+	<h2>Then type Yes or No</h2>
+	<h2>Type how many of the feet, meters, lbs, or kgs you want.</h2>
+<h2>Reload to try again</h2>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  </head>
+  <body>
+    <py-script>
+      question = input('What would you like to convert (kg, lbs, meters, feet)? ')
+if question == "kg":
+    convert_kg = str(input('Convert kg to lbs? (Yes, No)'))
+    if convert_kg == "No":
+            print('Ok, bye!')
+    elif convert_kg == "Yes":
+            kg_amount = float(input('How many kg\'s do you want to convert to lbs? '))
+            print('In pounds', kg_amount, 'kg, is:')
+            print(kg_amount * 2.20462, 'lbs')
+elif question == 'lbs':
+    convert_lbs = str(input('Convert lbs to kg? (Yes, No)'))
+    if convert_lbs == 'No':
+        print('Ok, bye!')
+    elif convert_lbs == 'Yes':
+        lbs_amount = float(input('How many lbs do you want to convert to kg\'s? '))
+        print('In kg', lbs_amount, 'lbs, is:')
+        print(lbs_amount / 2.20462, 'kg\'s')
+elif question == "feet":
+    convert_feet = str(input('Convert feet to meters? (Yes, No)'))
+    if convert_feet == "No":
+        print('Ok, bye!')
+    elif convert_feet == "Yes":
+        feet_amount = float(input('How many feet do you want to convert to meters? '))
+        print('In meters', feet_amount, 'feet, is:')
+        print(feet_amount / 3.28)
+elif question == "meters":
+    convert_meters = str(input('Convert meters to feet? (Yes, No)'))
+    if convert_meters == "No":
+        print('Ok, bye!')
+    elif convert_meters == "Yes":
+        meters_amount = float(input('How many meters do you want to convert to feet? '))
+        print('In feet', meters_amount, 'meters, is:')
+        print(meters_amount * 3.28084)
+
+    </py-script>
+  </body>
+</html>
